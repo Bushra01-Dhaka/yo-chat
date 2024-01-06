@@ -5,7 +5,7 @@ import SideNav from "./SideNav";
 
 const Sidebar = () => {
     return (
-        <div className="bg-purple-700 text-white h-full overflow-scroll">
+        <div className="bg-purple-700 text-white h-full overflow-auto">
            <SideNav></SideNav> 
            <Search></Search>
            <SideChats></SideChats>
