@@ -1,5 +1,21 @@
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+
 const SideNav = () => {
+  const {user, logOut} = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+
   return (
+    
     <div className="flex gap-4 justify-evenly items-center p-2 text-gray-200 text-sm bg-purple-500 shadow-md">
 
       <div className="">
@@ -12,10 +28,14 @@ const SideNav = () => {
             src="https://i.ibb.co/vmzMSLn/music.jpg" />
         <p className="">Hamdan</p>
       </div>
-         
-      <div>
-        <button className="btn btn-xs lg:btn-xs text-gray-500 bg-white border-0 rounded-md hover:bg-purple-700 hover:text-white">Sign Out</button>
+
+      {
+        user &&  <div>
+        <button onClick={handleLogOut} className="btn btn-xs lg:btn-xs text-gray-500 bg-white border-0 rounded-md hover:bg-purple-700 hover:text-white">Sign Out</button>
       </div>
+      }
+         
+     
 
     </div>
   );
