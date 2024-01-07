@@ -12,7 +12,7 @@ const Home = () => {
            <div className=" border-1 border-white lg:w-[80%] lg:h-[90vh] rounded-xl shadow-2xl overflow-hidden">
            <div className="flex justify-center h-full">
                 {/* sidebar */}
-                <div className="basis-2/5 h-full ">
+                <div className="basis-1/4 lg:basis-2/5 h-full ">
                     <Sidebar></Sidebar>
                 </div>
 

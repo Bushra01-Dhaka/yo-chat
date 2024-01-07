@@ -1,0 +1,14 @@
+/* Mobile */
+@media screen and (max-width: 480px) {
+    /* Your mobile styles here */
+}
+
+/* Tablet */
+@media screen and (max-width: 780px) {
+    /* Your tablet styles here */
+}
+
+/* Laptop */
+@media screen and (max-width: 1200px) {
+    /* Your laptop styles here */
+}
